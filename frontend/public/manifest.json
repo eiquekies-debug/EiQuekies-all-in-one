@@ -1,0 +1,22 @@
+{
+  "name": "EIQUEKIES - Premium Bakery Management",
+  "short_name": "EIQUEKIES",
+  "description": "Aplikasi Pengurusan Tempahan, Resipi & Inventori EIQUEKIES",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#FAF0E6",
+  "theme_color": "#FFB6C1",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
