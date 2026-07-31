@@ -1,0 +1,17 @@
+{
+  "name": "eiquekies-pwa",
+  "version": "1.0.0",
+  "description": "EIQUEKIES Premium Bakery Management System PWA",
+  "scripts": {
+    "dev:worker": "wrangler dev backend/src/index.js",
+    "deploy:worker": "wrangler deploy",
+    "db:migrate": "wrangler d1 execute eiquekies_db --file=database/schema.sql",
+    "db:seed": "wrangler d1 execute eiquekies_db --file=database/seed.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  },
+  "keywords": ["bakery", "pwa", "cloudflare", "d1", "workers"],
+  "author": "Eiquekies Dev Team",
+  "license": "MIT"
+}
