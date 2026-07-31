@@ -1,0 +1,17 @@
+name = "eiquekies"
+main = "backend/src/index.js"
+compatibility_date = "2026-07-31"
+
+# Menghubungkan Folder Frontend PWA
+[assets]
+directory = "./frontend"
+
+# Cloudflare D1 Database Binding
+[[d1_databases]]
+binding = "DB"
+database_name = "eiquekies_db"
+database_id = "e898659a-3b9f-41cb-9c64-bb76ef6678c5"
+
+[vars]
+ENVIRONMENT = "production"
+JWT_SECRET = "eiquekies_super_secret_jwt_key_2026_cute_bakery"
