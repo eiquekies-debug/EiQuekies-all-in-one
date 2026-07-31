@@ -1,0 +1,45 @@
+name: Deploy EIQUEKIES to Cloudflare
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-worker:
+    runs-on: ubuntu-latest
+    name: Deploy Backend Cloudflare Worker
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Deploy Worker API to Cloudflare
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy --config backend/wrangler.toml
+
+  deploy-pages:
+    runs-on: ubuntu-latest
+    name: Deploy Frontend to Cloudflare Pages
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Deploy Frontend Static Assets to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: 'eiquekies-app'
+          directory: 'frontend'
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
