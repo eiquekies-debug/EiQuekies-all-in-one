@@ -1,0 +1,21 @@
+body.dark-mode {
+  --cream-bg: #1E1B18;
+  --white: #2A2521;
+  --dark-brown: #F3E9E2;
+  --text-muted: #B8A89C;
+  --soft-pink: #3D2B32;
+  --border-color: #4A383F;
+}
+
+body.dark-mode .app-header,
+body.dark-mode .bottom-nav,
+body.dark-mode .card {
+  background-color: #2A2521;
+  border-color: #4A383F;
+}
+
+body.dark-mode .form-control {
+  background-color: #1E1B18;
+  color: #F3E9E2;
+  border-color: #4A383F;
+}
