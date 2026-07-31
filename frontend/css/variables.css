@@ -1,0 +1,34 @@
+:root {
+  /* Warna Utama Bakery Theme */
+  --primary-pink: #FF8DA1;
+  --primary-pink-hover: #FF6F8B;
+  --soft-pink: #FFE4E8;
+  --cream-bg: #FAF0E6;
+  --cream-card: #FFF8DC;
+  --white: #FFFFFF;
+  
+  /* Coklat & Teks */
+  --light-brown: #D2B48C;
+  --dark-brown: #5C3D2E;
+  --text-muted: #8C7A6B;
+  --border-color: #F0D9D1;
+
+  /* Status Colors */
+  --status-pending: #FFA07A;
+  --status-progress: #6495ED;
+  --status-ready: #20B2AA;
+  --status-success: #2E8B57;
+  --status-danger: #E91E63;
+
+  /* Shadows & Radius */
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 8px;
+  --radius-full: 999px;
+  --shadow-soft: 0 10px 25px rgba(220, 150, 160, 0.12);
+  --shadow-hover: 0 14px 30px rgba(220, 150, 160, 0.22);
+
+  /* Font */
+  --font-family: 'Fredoka', 'Quicksand', system-ui, -apple-system, sans-serif;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
