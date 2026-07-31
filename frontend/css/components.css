@@ -1,0 +1,123 @@
+/* Card Container */
+.card {
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--soft-pink);
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Large Round Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(255, 141, 161, 0.3);
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn-primary {
+  background-color: var(--primary-pink);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-pink-hover);
+}
+
+.btn-secondary {
+  background-color: var(--soft-pink);
+  color: var(--primary-pink);
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  color: white;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.badge-pending { background-color: #FFE6D5; color: var(--status-pending); }
+.badge-progress { background-color: #E3F2FD; color: var(--status-progress); }
+.badge-ready { background-color: #E0F2F1; color: var(--status-ready); }
+.badge-delivered { background-color: #E8F5E9; color: var(--status-success); }
+
+/* Form Controls */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--dark-brown);
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--soft-pink);
+  font-size: 0.95rem;
+  outline: none;
+  transition: var(--transition);
+  background-color: #FAFAFA;
+}
+
+.form-control:focus {
+  border-color: var(--primary-pink);
+  background-color: var(--white);
+}
+
+/* Toast Notifications */
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.toast {
+  background-color: var(--dark-brown);
+  color: var(--white);
+  padding: 14px 22px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+  animation: slideIn 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
