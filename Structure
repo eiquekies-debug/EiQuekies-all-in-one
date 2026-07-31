@@ -1,39 +1,60 @@
-eiquekies-pwa/
-├── manifest.json
-├── service-worker.js
-├── index.html
-├── netlify.toml
-├── assets/
-│   ├── logo/
-│   │   └── logo.png                <-- Simpan gambar logo utama (IMG_8800.jpg) di sini
-│   ├── illustrations/              <-- Simpan sticker EiQuekies (1-50) di sini
-│   └── sounds/
-│       └── click.mp3
-├── css/
-│   ├── tailwind.css
-│   └── custom.css                  <-- Design System Custom CSS (Glassmorphism & iOS animations)
-├── js/
-│   ├── app.js                      <-- App Initialization & Router
-│   ├── pwa-installer.js
-│   ├── supabase.js                 <-- Supabase Client & Sync Engine
-│   ├── audio.js                    <-- Sound Effects & Haptics Engine
-│   └── ai-assistant.js             <-- OpenAI Integration
-├── components/
-│   ├── navbar.js
-│   ├── sidebar.js
-│   ├── fab.js                      <-- Floating Action Button
-│   ├── toast.js
-│   └── modal.js
-└── pages/
-    ├── login.js
-    ├── dashboard.js
-    ├── pos.js
-    ├── orders.js
-    ├── products.js
-    ├── recipe.js
-    ├── costing.js
-    ├── inventory.js
-    ├── finance.js
-    ├── reports.js
-    ├── staff.js
-    └── settings.js
+EIQUEKIES/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+├── database/
+│   ├── schema.sql
+│   └── seed.sql
+├── backend/
+│   ├── wrangler.toml
+│   ├── package.json
+│   └── src/
+│       ├── index.js
+│       ├── middleware/
+│       │   └── auth.js
+│       ├── utils/
+│       │   ├── response.js
+│       │   └── whatsapp.js
+│       └── routes/
+│           ├── auth.js
+│           ├── dashboard.js
+│           ├── orders.js
+│           ├── customers.js
+│           ├── inventory.js
+│           ├── recipes.js
+│           ├── finance.js
+│           ├── calculator.js
+│           ├── todo.js
+│           └── gallery.js
+├── frontend/
+│   ├── public/
+│   │   ├── manifest.json
+│   │   ├── sw.js
+│   │   └── favicon.ico
+│   ├── css/
+│   │   ├── variables.css
+│   │   ├── style.css
+│   │   ├── components.css
+│   │   └── dark-mode.css
+│   ├── js/
+│   │   ├── app.js
+│   │   ├── sound.js
+│   │   ├── router.js
+│   │   ├── api.js
+│   │   ├── state.js
+│   │   ├── utils.js
+│   │   └── modules/
+│   │       ├── auth.js
+│   │       ├── dashboard.js
+│   │       ├── orders.js
+│   │       ├── customers.js
+│   │       ├── calculator.js
+│   │       ├── inventory.js
+│   │       ├── recipes.js
+│   │       ├── finance.js
+│   │       ├── calendar.js
+│   │       ├── gallery.js
+│   │       ├── todo.js
+│   │       └── settings.js
+│   └── index.html
+└── package.json
