@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EIQUEKIES - Premium Bakery App</title>
+  
+  <!-- PWA Manifest & Favicon -->
+  <link rel="manifest" href="/public/manifest.json">
+  <link rel="icon" type="image/png" href="/public/favicon.ico">
+  <meta name="theme-color" content="#FFB6C1">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+</head>
+<body>
+
+  <div id="app">
+    <!-- Header App Bar -->
+    <header class="app-header">
+      <div class="brand-logo">
+        <span>🧁</span> EIQUEKIES
+      </div>
+      <div class="header-actions" style="display: flex; gap: 10px; align-items: center;">
+        <button id="btn-quick-search" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.85rem;">🔍 Cari</button>
+        <span id="user-badge" class="badge badge-ready" style="display:none;">Owner</span>
+      </div>
+    </header>
+
+    <!-- Navigation Bar (Sidebar Desktop / Bottom Bar Mobile) -->
+    <nav class="bottom-nav" id="main-nav">
+      <a href="#dashboard" class="nav-item active" data-route="dashboard">
+        <span class="icon">🏠</span>
+        <span>Utama</span>
+      </a>
+      <a href="#orders" class="nav-item" data-route="orders">
+        <span class="icon">📦</span>
+        <span>Tempahan</span>
+      </a>
+      <a href="#calculator" class="nav-item" data-route="calculator">
+        <span class="icon">🧮</span>
+        <span>Kalkulator</span>
+      </a>
+      <a href="#inventory" class="nav-item" data-route="inventory">
+        <span class="icon">🧈</span>
+        <span>Inventori</span>
+      </a>
+      <a href="#customers" class="nav-item" data-route="customers">
+        <span class="icon">👥</span>
+        <span>Pelanggan</span>
+      </a>
+      <a href="#settings" class="nav-item" data-route="settings">
+        <span class="icon">⚙️</span>
+        <span>Tetapan</span>
+      </a>
+    </nav>
+
+    <!-- Main Dynamic Content Wrapper -->
+    <main class="main-content" id="app-view">
+      <div style="text-align: center; padding: 40px;">
+        <h2>🧁 Memuatkan EIQUEKIES...</h2>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal Container Global -->
+  <div id="modal-container" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 2000; align-items: center; justify-content: center; padding: 20px;">
+    <div id="modal-content" class="card" style="max-width: 500px; width: 100%; max-height: 90vh; overflow-y: auto;">
+      <!-- Dynamic Modal Content -->
+    </div>
+  </div>
+
+  <!-- Toast Notification Wrapper -->
+  <div class="toast-container"></div>
+
+  <!-- JavaScript App Modules -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
