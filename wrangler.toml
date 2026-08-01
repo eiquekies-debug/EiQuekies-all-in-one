@@ -1,8 +1,5 @@
 # wrangler.toml
 name = 'eiquekies-all-in-one'
-
-
-name = "eiquekies"
 main = "backend/src/index.js"
 compatibility_date = "2026-07-31"
 
